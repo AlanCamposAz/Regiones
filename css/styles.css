@@ -1,0 +1,782 @@
+/* Estilos Generales */
+:root {
+    --verde-oscuro: #1B5E20;
+    --verde-claro: #4CAF50;
+    --azul: #1976D2;
+    --naranja: #FF9800;
+    --amarillo: #FFC107;
+    --fondo-claro: #FAFAFA;
+    --texto-oscuro: #212121;
+    --texto-claro: #FFFFFF;
+    --borde: #E0E0E0;
+    --sombra: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--texto-oscuro);
+    background-color: var(--fondo-claro);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Encabezado */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--verde-oscuro);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo h1 {
+    color: var(--texto-claro);
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: var(--texto-claro);
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  .navbar a:hover, .navbar a.active {
+    background-color: rgba(255,255,255,0.2);
+  }
+  
+  /* Páginas de Contenido */
+  .content-page .page-header {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--texto-claro);
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+  }
+  
+  .content-page .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .content-page .page-header p {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .page-content {
+    padding: 3rem 0;
+  }
+  
+  .card {
+    background-color: var(--texto-claro);
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h2 {
+    color: var(--verde-oscuro);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--verde-claro);
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Páginas de Regiones */
+  .region-page .region-header {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--texto-claro);
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+  }
+  
+  .region-page .region-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .region-page .region-header p {
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .region-content {
+    padding: 3rem 0;
+  }
+  
+  .region-info, .region-factores, .region-estrategias {
+    background-color: var(--texto-claro);
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .region-info h2, .region-factores h2, .region-estrategias h2 {
+    color: var(--verde-oscuro);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--verde-claro);
+    padding-bottom: 0.5rem;
+  }
+  
+  .cultivos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .cultivo-card {
+    background-color: var(--texto-claro);
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .cultivo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cultivo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .cultivo-card h3 {
+    color: var(--verde-oscuro);
+    padding: 1rem 1rem 0;
+  }
+  
+  .cultivo-card p {
+    padding: 0 1rem 1rem;
+  }
+  
+  /* Slider */
+  .regiones-slider {
+    padding: 4rem 0;
+    background-color: var(--verde-claro);
+  }
+  
+  .regiones-slider h2 {
+    color: var(--texto-claro);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  
+  .slider-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  
+  .slider {
+    display: flex;
+    height: 450px;
+  }
+  
+  .slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--texto-claro);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 3px solid var(--texto-claro);
+  }
+  
+  .slide-info {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--texto-claro);
+    border-radius: 8px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border: 1px solid var(--borde);
+  }
+  
+  .slide-info h3 {
+    color: var(--verde-oscuro);
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .slide-info p {
+    color: var(--texto-oscuro);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+    background-color: var(--naranja);
+    color: var(--texto-claro);
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .btn:hover {
+    background-color: var(--azul);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--texto-claro);
+    color: var(--verde-oscuro);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+  }
+  
+  .slider-btn:hover {
+    background-color: var(--verde-oscuro);
+    color: var(--texto-claro);
+  }
+  
+  .slider-btn.prev {
+    left: 20px;
+  }
+  
+  .slider-btn.next {
+    right: 20px;
+  }
+  
+  /* Pie de página */
+  .footer {
+    background-color: var(--verde-oscuro);
+    color: var(--texto-claro);
+    padding: 3rem 0 0;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section h3 {
+    border-bottom: 2px solid var(--verde-claro);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    color: var(--texto-claro);
+    font-size: 1.5rem;
+    transition: all 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: var(--amarillo);
+    transform: translateY(-3px);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: rgba(0,0,0,0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .navbar ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+      gap: 0.8rem;
+    }
+    
+    .content-page .page-header h1,
+    .region-page .region-header h1 {
+      font-size: 2.5rem;
+    }
+    
+    .content-page .page-header p,
+    .region-page .region-header p {
+      font-size: 1.2rem;
+    }
+    
+    .slider-container {
+      height: 500px;
+    }
+    
+    .slide img {
+      height: 220px;
+    }
+    
+    .cultivos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Estilos específicos para páginas de regiones */
+.region-page .region-header {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.region-page .region-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.region-page .region-header p {
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.factores-card, .cultivos-card, .principios-card, .estrategias-card {
+  margin-bottom: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.factores-card:hover, .cultivos-card:hover, .principios-card:hover, .estrategias-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  color: var(--verde-oscuro);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--verde-claro);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cultivos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.cultivo-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(76, 175, 80, 0.05);
+  border-radius: 8px;
+}
+
+.cultivo-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cultivo-item h3 {
+  color: var(--verde-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.cultivo-item ul {
+  margin-top: 0.5rem;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: var(--texto-oscuro);
+}
+
+.factor-item, .principio-item, .estrategia-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--borde);
+}
+
+.factor-item:last-child, .principio-item:last-child, .estrategia-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.factor-item h3, .principio-item h3, .estrategia-item h3 {
+  color: var(--azul);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .region-page .region-header h1 {
+      font-size: 2.5rem;
+  }
+  
+  .region-page .region-header p {
+      font-size: 1.2rem;
+  }
+  
+  .cultivo-item {
+      grid-template-columns: 1fr;
+  }
+  
+  .cultivo-item img {
+      height: 200px;
+  }
+}
+
+/* Estilos específicos para Altas Montañas */
+.factores-card h2 {
+  color: #5D4037;
+}
+
+.cultivos-card h2 {
+  color: #8D6E63;
+}
+
+.principios-card h2 {
+  color: #78909C;
+}
+
+.estrategias-card h2 {
+  color: #2E7D32;
+}
+
+.cultivo-item {
+  background-color: rgba(141, 110, 99, 0.05);
+}
+
+/* Efectos hover específicos */
+.factores-card:hover {
+  box-shadow: 0 10px 20px rgba(93, 64, 55, 0.1);
+}
+
+.cultivos-card:hover {
+  box-shadow: 0 10px 20px rgba(141, 110, 99, 0.1);
+}
+
+.principios-card:hover {
+  box-shadow: 0 10px 20px rgba(120, 144, 156, 0.1);
+}
+
+.estrategias-card:hover {
+  box-shadow: 0 10px 20px rgba(165, 214, 167, 0.1);
+}
+
+/* Adaptaciones para cultivos de altura */
+.altura-info {
+  display: inline-block;
+  background-color: #78909C;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+/* Responsive específico */
+@media (max-width: 768px) {
+  .region-header h1 {
+      font-size: 2.2rem;
+  }
+  
+  .cultivo-item {
+      grid-template-columns: 1fr;
+  }
+  
+  .cultivo-item img {
+      height: 180px;
+  }
+}
+
+/* Estilos específicos para Totonaca */
+.factores-card h2 {
+  color: #6A1B9A;
+}
+
+.cultivos-card h2 {
+  color: #AB47BC;
+}
+
+.principios-card h2 {
+  color: #7E57C2;
+}
+
+.estrategias-card h2 {
+  color: #6A1B9A;
+}
+
+.cultural-card {
+  border-left: 5px solid #FFA000;
+  margin-top: 30px;
+}
+
+.cultural-card h2 {
+  color: #FFA000;
+}
+
+.cultivo-item {
+  background-color: rgba(171, 71, 188, 0.05);
+}
+
+.cultural-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cultural-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(255, 160, 0, 0.05);
+  border-radius: 8px;
+}
+
+.cultural-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Efectos hover */
+.factores-card:hover {
+  box-shadow: 0 10px 20px rgba(106, 27, 154, 0.1);
+}
+
+.cultivos-card:hover {
+  box-shadow: 0 10px 20px rgba(171, 71, 188, 0.1);
+}
+
+.principios-card:hover {
+  box-shadow: 0 10px 20px rgba(126, 87, 194, 0.1);
+}
+
+.estrategias-card:hover {
+  box-shadow: 0 10px 20px rgba(206, 147, 216, 0.1);
+}
+
+.cultural-card:hover {
+  box-shadow: 0 10px 20px rgba(255, 160, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cultural-item {
+      flex-direction: column;
+  }
+  
+  .cultural-item img {
+      width: 100%;
+      height: 150px;
+  }
+  
+  .vanilla-badge {
+      display: block;
+      margin: 10px 0 0 0;
+      width: fit-content;
+  }
+}
+
+/* Estilos específicos para Nautla */
+.factores-card h2 {
+  color: #0288D1;
+}
+
+.cultivos-card h2 {
+  color: #03A9F4;
+}
+
+.principios-card h2 {
+  color: #4FC3F7;
+}
+
+.estrategias-card h2 {
+  color: #0288D1;
+}
+
+.coastal-features {
+  border-left: 5px solid #00796B;
+  margin-top: 30px;
+}
+
+.coastal-features h2 {
+  color: #00796B;
+}
+
+.cultivo-item {
+  background-color: rgba(3, 169, 244, 0.05);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 121, 107, 0.05);
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-item i {
+  color: #0288D1;
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  color: #00796B;
+  margin-bottom: 10px;
+}
+
+/* Efectos hover */
+.factores-card:hover {
+  box-shadow: 0 10px 20px rgba(2, 136, 209, 0.1);
+}
+
+.cultivos-card:hover {
+  box-shadow: 0 10px 20px rgba(3, 169, 244, 0.1);
+}
+
+.principios-card:hover {
+  box-shadow: 0 10px 20px rgba(79, 195, 247, 0.1);
+}
+
+.estrategias-card:hover {
+  box-shadow: 0 10px 20px rgba(179, 229, 252, 0.1);
+}
+
+.coastal-features:hover {
+  box-shadow: 0 10px 20px rgba(0, 121, 107, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .coastal-badge {
+      display: block;
+      margin: 10px 0 0 0;
+      width: fit-content;
+  }
+}

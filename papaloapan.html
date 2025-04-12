@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Región Papaloapan - Cultivos de Veracruz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Estilos específicos para la región Papaloapan */
+        .region-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/papaloapan-banner.png') !important;
+            background-size: cover !important;
+            background-position: center 70% !important;
+        }
+        
+        .factores-card {
+            border-left: 5px solid #388E3C;
+        }
+        
+        .cultivos-card {
+            border-left: 5px solid #689F38;
+        }
+        
+        .principios-card {
+            border-left: 5px solid #8BC34A;
+        }
+        
+        .estrategias-card {
+            border-left: 5px solid #DCEDC8;
+        }
+
+        .river-badge {
+            background-color: #388E3C;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .flood-info {
+            background-color: #E8F5E9;
+            border-left: 3px solid #388E3C;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .water-icon {
+            color: #388E3C;
+            margin-right: 10px;
+        }
+
+        /* Estilos específicos para Papaloapan */
+        .factores-card h2 {
+            color: #388E3C;
+        }
+
+        .cultivos-card h2 {
+            color: #689F38;
+        }
+
+        .principios-card h2 {
+            color: #8BC34A;
+        }
+
+        .estrategias-card h2 {
+            color: #388E3C;
+        }
+
+        .river-system {
+            border-left: 5px solid #00796B;
+            margin-top: 30px;
+        }
+
+        .river-system h2 {
+            color: #00796B;
+        }
+
+        .cultivo-item {
+            background-color: rgba(104, 159, 56, 0.05);
+        }
+
+        .river-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .river-item {
+            background-color: rgba(56, 142, 60, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .river-item h3 {
+            color: #388E3C;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .river-item ul {
+            padding-left: 20px;
+        }
+
+        .river-item li {
+            margin-bottom: 8px;
+        }
+
+        /* Efectos hover */
+        .factores-card:hover {
+            box-shadow: 0 10px 20px rgba(56, 142, 60, 0.1);
+        }
+
+        .cultivos-card:hover {
+            box-shadow: 0 10px 20px rgba(104, 159, 56, 0.1);
+        }
+
+        .principios-card:hover {
+            box-shadow: 0 10px 20px rgba(139, 195, 74, 0.1);
+        }
+
+        .estrategias-card:hover {
+            box-shadow: 0 10px 20px rgba(220, 237, 200, 0.1);
+        }
+
+        .river-system:hover {
+            box-shadow: 0 10px 20px rgba(0, 121, 107, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .river-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .river-badge {
+                display: block;
+                margin: 10px 0 0 0;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Cultivos de Veracruz</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../factores-ambientales.html">Factores Ambientales</a></li>
+                <li><a href="../principios-ecologicos.html">Principios Ecológicos</a></li>
+                <li><a href="../estrategias-sustentables.html">Estrategias Sustentables</a></li>
+                <li><a href="../acerca-de.html">Acerca del Proyecto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="region-page">
+        <section class="region-header">
+            <div class="container">
+                <h1>Región Papaloapan</h1>
+                <p>Fértil llanura aluvial con abundantes recursos hídricos</p>
+            </div>
+        </section>
+
+        <section class="region-content">
+            <div class="container">
+                <article class="card factores-card">
+                    <h2><i class="fas fa-water water-icon"></i> Factores Ambientales</h2>
+                    <div class="factor-item">
+                        <h3>Hidrología</h3>
+                        <p>Red fluvial extensa con el río Papaloapan como eje principal. Inundaciones estacionales que fertilizan los suelos.</p>
+                        <div class="flood-info">
+                            <i class="fas fa-info-circle water-icon"></i>
+                            <strong>Ciclo de inundaciones:</strong> Junio-Octubre (coincide con lluvias)
+                        </div>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Suelos</h3>
+                        <p>Suelos aluviales profundos con alta fertilidad natural. Textura franco-arcillosa.</p>
+                    </div>
+                    <div class="factor-item">
+                        <h3>Clima</h3>
+                        <p>Cálido húmedo con temperatura media de 25-28°C y precipitación >2,000 mm anuales.</p>
+                    </div>
+                </article>
+
+                <article class="card cultivos-card">
+                    <h2><i class="fas fa-tractor"></i> Principales Cultivos</h2>
+                    <div class="cultivos-grid">
+                        <div class="cultivo-item">
+                            <img src="../img/platano.jpg" alt="Plátano">
+                            <div>
+                                <h3>Plátano</h3>
+                                <p>Cultivo perenne que aprovecha la humedad constante. Principal producto de exportación regional.</p>
+                                <ul>
+                                    <li>Densidad: 1,600-2,000 plantas/ha</li>
+                                    <li>Rendimiento: 35-45 ton/ha</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cultivo-item">
+                            <img src="../img/cana-azucar.jpeg" alt="Caña de azúcar">
+                            <div>
+                                <h3>Caña de azúcar</h3>
+                                <p>Cultivo semiperenne con alta demanda hídrica. Ciclo de 12-14 meses.</p>
+                                <ul>
+                                    <li>Superficie: ~50,000 ha</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cultivo-item">
+                            <img src="../img/cacao.jpg" alt="Cacao">
+                            <div>
+                                <h3>Cacao</h3>
+                                <p>Cultivo tradicional bajo sombra. Variedades finas de aroma.</p>
+                                <ul>
+                                    <li>Variedades: Criollo, Trinitario</li>
+                                    <li>Producción: ~3,000 ton/año</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card principios-card">
+                    <h2><i class="fas fa-seedling"></i> Principios Ecológicos</h2>
+                    <div class="principio-item">
+                        <h3>Ley del Mínimo (Liebig)</h3>
+                        <p>En plátano, el potasio es frecuentemente el nutriente limitante a pesar de suelos fértiles.</p>
+                    </div>
+                    <div class="principio-item">
+                        <h3>Ley de la Tolerancia (Shelford)</h3>
+                        <p>El cacao requiere sombra (30-50% luz) y humedad constante (>80%). Exceso de sol lo daña.</p>
+                    </div>
+                    <div class="principio-item">
+                        <h3>Sucesión aluvial</h3>
+                        <p>Las inundaciones anuales renuevan nutrientes pero requieren cultivos tolerantes a anegamiento.</p>
+                    </div>
+                </article>
+
+                <article class="card estrategias-card">
+                    <h2><i class="fas fa-recycle"></i> Estrategias Sustentables</h2>
+                    <div class="estrategia-item">
+                        <h3>Drenaje controlado</h3>
+                        <p>Sistemas de canales para manejar excesos hídricos en época de lluvias.</p>
+                    </div>
+                    <div class="estrategia-item">
+                        <h3>Agroforestería</h3>
+                        <p>Cultivo de cacao bajo sombra de árboles nativos que protegen biodiversidad.</p>
+                    </div>
+                    <div class="estrategia-item">
+                        <h3>Fertilización verde</h3>
+                        <p>Uso de leguminosas entre ciclos para fijar nitrógeno en suelos aluviales.</p>
+                    </div>
+                    <div class="estrategia-item">
+                        <h3>Control biológico</h3>
+                        <p>Manejo del picudo del plátano con hongos entomopatógenos.</p>
+                    </div>
+                </article>
+
+                <article class="card river-system">
+                    <h2><i class="fas fa-river water-icon"></i> Sistema Fluvial</h2>
+                    <div class="river-features">
+                        <div class="river-item">
+                            <h3><i class="fas fa-water water-icon"></i> Ríos Principales</h3>
+                            <ul>
+                                <li>Papaloapan</li>
+                                <li>Tesechoacán</li>
+                                <li>San Juan</li>
+                                <li>Lerdo de Tejada</li>
+                            </ul>
+                        </div>
+                        <div class="river-item">
+                            <h3><i class="fas fa-fish water-icon"></i> Ecosistemas Acuáticos</h3>
+                            <ul>
+                                <li>Lagunas costeras</li>
+                                <li>Humedales</li>
+                                <li>Manglares</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre el proyecto</h3>
+                <p>Investigación sobre los cultivos de Veracruz y su relación con factores ambientales.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Campos Azamar Alan Osvaldo</p>
+        </div>
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
